@@ -1,6 +1,5 @@
-import pandas
-import streamlit as st
 import pandas as pd
+import streamlit as st
 
 st.set_page_config(layout="wide")
 
@@ -25,7 +24,7 @@ st.header("Our Team")
 
 col1, col2, col3 = st.columns(3)
 
-df = pandas.read_csv("data.csv", sep=",")
+df = pd.read_csv("data.csv", sep=",")
 with col1:
     for index, row in df[:4].iterrows():
         st.header(row["first name"].title() + " " + row["last name"].title())
